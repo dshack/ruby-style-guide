@@ -70,7 +70,7 @@ The translation of the following languages ​​are available:
 * [Spanish] (https://github.com/alemohamad/ruby-style-guide/blob/master/README-esLA.md)
 * [Vietnamese] (https://github.com/scrum2b/ruby-style-guide/blob/master/README-viVN.md)
 
-# # Table of Contents
+## Table of Contents
 
 * Layout (# Layout)
 * [Syntax] (# syntax)
@@ -97,7 +97,7 @@ The translation of the following languages ​​are available:
 * Let's using `UTF-8` The encoding of the source file.
 * The indent two spaces ** ** (also known as soft tab). You should not be using the (hard) tab.
 
-    `` `Ruby
+    ```Ruby
     # Bad example - four spaces
     def some_method
         do_something
@@ -107,21 +107,21 @@ The translation of the following languages ​​are available:
     def some_method
       do_something
     end
-    `` `
+    ```
 
 * We will continue with our new line of Unix-style.
 (* BSD / Solaris / Linux / OS X user is set by default.
   Windows users need special attention. )
     * And if you are using Git, then the new line of Windows to prevent funneled to the project, it is preferable to add the following might be good:
 
-    `` `Bash
+    ```Bash
     $ Git config - global core.autocrlf true
-    `` `
+    ```
 
-* `To separate the expression or statement; You should not be using the`.
+* To separate the expression or statement; You should not be using the.
   Of course, try to Tsunishi one type per line.
 
-    `` `Ruby
+    ```Ruby
     # Bad example
     A semicolon extra #; puts 'foobar'.
 
@@ -134,11 +134,11 @@ The translation of the following languages ​​are available:
     puts 'bar'
 
     It applies in particular puts puts 'foo', 'bar' #.
-    `` `
+    ```
 
 * The format of a line is to be preferred class with no body.
 
-    `` `Ruby
+    ```   Ruby
     # Bad example
     class FooError <StandardError
     end
@@ -148,14 +148,14 @@ The translation of the following languages ​​are available:
 
     # A good example
     FooError = Class.new (StandardError)
-    `` `
+    ```   
 
 * Method of a line Avoid.
   There are some places that have been used some,
   There are peculiarities of some to be defined specification of their syntax is undesirable.
   I should be the one to equation (1) at most one line method - at any rate.
 
-    `` `Ruby
+    ```   Ruby
     # Bad example
     def too_much; something; something_else; end
 
@@ -172,48 +172,48 @@ The translation of the following languages ​​are available:
     def some_method
       body
     end
-    `` `
+    ```   
 
     Empty method is an exception to this rule text.
 
-    `` `Ruby
+    ```   Ruby
     # Good
     def no_op; end
-    `` `
+    ```   
 
 * Before and after the operator, after a comma, colon, semicolon, before and after the {`,`} `Let's put a space before the`.
   (In most cases) space is not as important to the interpreter of Ruby,
   Proper use of space is the key for writing easily readable code.
 
-    `` `Ruby
+    ```   Ruby
     sum = 1 + 2
     a, b = 1, 2
     ? 1> 2 true: false; puts 'Hi'
     . [1, 2, 3] each {| e | puts e}
-    `` `
+    ```   
 
     For operators only exception is the exponentiation operator:
 
-    `` `Ruby
+    ```   Ruby
     # Bad example
     e = M * c ** 2
 
     # A good example
     e = M * c ** 2
-    `` `
+    ```   
 
     `The` {`and`}, it is useful for the sake of clarity of syntax.
     So, as if to fill the floor to a string,
     It is used to hash and syntax block.
     The hash syntax, style of the two is acceptable.
 
-    `` `Ruby
+    ```   Ruby
     # A good example - I put in front of the {and} after the space
     {One: 1, two: 2}
 
     # A good example - it is not put in front of the {and} after the space
     {One: 1, two: 2}
-    `` `
+    ```   
 
     The syntax of the first (and is popular in the Ruby community general arguably) it is easy to read a little slight.
     Second syntax is advantageous in that they can be differentiated visually and hash block.
@@ -221,13 +221,13 @@ The translation of the following languages ​​are available:
 
     Syntax to be embedded in the string can also be acceptable in two styles:
 
-    `` `Ruby
+    ```   Ruby
     # Good example - with no spaces
     "String # {expr}"
 
     # Good example - better here is easy to read in almost certainly
     "String # {expr}"
-    `` `
+    ```   
 
     There is a very popular than other formulas, equations The first is writing which proceeds to use here in general.
     On the other hand, the second, (no doubt) I am a little easy to read.
@@ -235,27 +235,27 @@ The translation of the following languages ​​are available:
 
 * `There is no space ([and after the`, `]` ``, `,) in front of the`.
 
-    `` `Ruby
+    ```   Ruby
     some (arg). other
     [1, 2, 3]. Size
-    `` `
+    ```   
 
 * `!` There is no space after the.
 
-    `` `Ruby
+    ```   Ruby
     # Bad example
     ! Something
 
     # A good example
     ! Something
-    `` `
+    ```   
 
 * `Let's aligned to the same depth as the` case `is when`.
   Although I know many people from not agree,
   This "The Ruby Programming Language", "Programming Ruby" style
   It is something that has been established in both.
 
-    `` `Ruby
+    ```   Ruby
     # Bad example
     case
       when song.name == 'Misty'
@@ -279,12 +279,12 @@ The translation of the following languages ​​are available:
     else
       song.play
     end
-    `` `
+    ```   
 
 * When you assigned to a variable conditional expression,
   Let's maintain the alignment of its normal expression.
 
-    `` `Ruby
+    ```   Ruby
     # Bad example - is very complex
     kind = case year
     when 1850 .. 1889 then 'Blues'
@@ -334,12 +334,12 @@ The translation of the following languages ​​are available:
       else
         calc_something_else
       end
-    `` `
+    ```   
 
 * Put a blank line between the definition formula,
   Let's divided into logical paragraphs in the method.
 
-    `` `Ruby
+    ```   Ruby
     def some_method
       data = initialize (options)
 
@@ -351,12 +351,12 @@ The translation of the following languages ​​are available:
     def some_method
       result
     end
-    `` `
+    ```   
 
 * Comma after the last argument of the method invocation Avoid.
   When the arguments are not divided into multiple lines, Avoid in particular.
 
-    `` `Ruby
+    ```   Ruby
     # Bad example - you can move, add, delete the argument easily, but it is still not recommended.
     some_method (
                  size,
@@ -369,12 +369,12 @@ The translation of the following languages ​​are available:
 
     # A good example
     some_method (size, count, color)
-    `` `
+    ```   
 
 * When you assign an initial value to the argument of the method,
   `=` Let's put a space around the operator.
 
-    `` `Ruby
+    ```   Ruby
     # Bad example
     def some_method (arg1 =: default, arg2 = nil, arg3 = [])
       # Do something ...
@@ -384,7 +384,7 @@ The translation of the following languages ​​are available:
     def some_method (arg1 =: default, arg2 = nil, arg3 = [])
       # Do something ...
     end
-    `` `
+    ```   
 
     Ruby books, but some have proposed the style of the first,
     Person of the second will have better practical
@@ -393,7 +393,7 @@ The translation of the following languages ​​are available:
 * Avoid the line continuation using unnecessary `\`.
   In fact, let's avoid the continuation of the line in the string concatenation other than.
 
-    `` `Ruby
+    ```   Ruby
     # Bad example
     result = 1 - \
              Two
@@ -404,11 +404,11 @@ The translation of the following languages ​​are available:
 
     long_string = 'First part of the long string' \
                   'And second part of the long string'
-    `` `
+    ```   
 
 * When you connect to other lines the chain method, let's put on the next line `.`.
 
-    `` `Ruby
+    ```   Ruby
     # Bad example - you must examine the first line to understand the second line
     one.two.three.
       four
@@ -416,13 +416,13 @@ The translation of the following languages ​​are available:
     # A good example - I can understand immediately what is going on in the second line
     one.two.three
       . Four
-    `` `
+    ```   
 
 * When a method call spans multiple lines, the argument let's aligned.
   When for the constraint length of a line, it is not suitable to align the argument,
   I can tolerate the style to align in one minute indent after the first argument.
 
-    `` `Ruby
+    ```   Ruby
     # (One line is very long) initial value
     def send_mail (source)
       Mailer.deliver (to: 'bob@example.com', from: 'us@example.com', subject: 'Important message', body: source.text)
@@ -454,11 +454,11 @@ The translation of the following languages ​​are available:
         body: source.text
       )
     end
-    `` `
+    ```   
 
 * Array that spans more than one line, let's align the elements.
 
-    `` `Ruby
+    ```   Ruby
     # Bad example - is another indent 1
     menu_item = ["Spam", "Spam", "Spam", "Spam", "Spam", "Spam", "Spam", "Spam",
       "Baked beans", "Spam", "Spam", "Spam", "Spam", "Spam"]
@@ -473,17 +473,17 @@ The translation of the following languages ​​are available:
     menu_item =
       ["Spam", "Spam", "Spam", "Spam", "Spam", "Spam", "Spam", "Spam",
        "Baked beans", "Spam", "Spam", "Spam", "Spam", "Spam"]
-    `` `
+    ```   
 
 * For readability, let's put the underscore in large numbers.
 
-    `` `Ruby
+    ```   Ruby
     # Bad example - How many 0?
     num = 1000000
 
     # A good example - I can be analyzed more easily in a person's head
     num = 1_000_000
-    `` `
+    ```   
 
 * For documents of API, let's follow the terms of the RDoc.
   It should not be a blank line between the comment lines of `def`.
@@ -493,7 +493,7 @@ The translation of the following languages ​​are available:
   And to not work space to go into before,
   Unlike regular comments, indistinguishable easily.
 
-    `` `Ruby
+    ```   Ruby
     # Bad example
     == Begin
     comment line
@@ -503,7 +503,7 @@ The translation of the following languages ​​are available:
     # A good example
     # Comment line
     # Another comment line
-    `` `
+    ```   
 
 # # Syntax
 
@@ -511,7 +511,7 @@ The translation of the following languages ​​are available:
   Let's use only when you see (or () `` Nokogiri :: HTML () `` Array, for example) constructor.
   Avoid the use of `::` In a normal method call.
 
-    `` `Ruby
+    ```   Ruby
     # Bad example
     SomeClass :: some_method
     some_object :: some_method
@@ -521,12 +521,12 @@ The translation of the following languages ​​are available:
     some_object.some_method
     SomeModule :: SomeClass :: SOME_CONST
     SomeModule :: SomeClass ()
-    `` `
+    ```   
 
 * If any of the arguments, let's use along with the `()` is `def`.
   Let's except for `()` If there is no argument.
 
-     `` `Ruby
+     ```   Ruby
      # Bad example
      def some_method ()
        # Body omitted
@@ -546,7 +546,7 @@ The translation of the following languages ​​are available:
      def some_method_with_arguments (arg1, arg2)
        # Body omitted
      end
-     `` `
+     ```   
 
 * If you do not know exactly why you should not be used, and do not use the `for` never.
   Iterator should be used instead.
@@ -554,7 +554,7 @@ The translation of the following languages ​​are available:
   `(Unlike` each `) for` does not introduce a new scope,
   Variables defined within the block will become visible from the outside of the block.
 
-    `` `Ruby
+    ```   Ruby
     arr = [1, 2, 3]
 
     # Bad example
@@ -570,11 +570,11 @@ The translation of the following languages ​​are available:
 
     # Will be unable to see the outside of each block elem
     elem # => NameError: undefined local variable or method `elem '
-    `` `
+    ```   
 
 * The `Do not use it in the` if / unless `span multiple lines then`.
 
-    `` `Ruby
+    ```   Ruby
     # Bad example
     if some_condition then
       # Body omitted
@@ -584,11 +584,11 @@ The translation of the following languages ​​are available:
     if some_condition
       # Body omitted
     end
-    `` `
+    ```   
 
 * In the `if / unless` multi-line, let's put on the same line as the `if / unless` always conditional expression.
 
-    `` `Ruby
+    ```   Ruby
     # Bad example
     if
       some_condition
@@ -601,24 +601,24 @@ The translation of the following languages ​​are available:
       do_something
       do_something_else
     end
-    `` `
+    ```   
 
 * `Ternary operator than if / then / else / end` syntax: I prefer the (`?)
   It is the simplicity of those there is a clearer.
 
-    `` `Ruby
+    ```   Ruby
     # Bad example
     result = if some_condition then something else something_else end
 
     # A good example
     ? result = some_condition something: something_else
-    `` `
+    ```   
 
 * Ternary operator Let's make up one for one formula.
   In other words, the ternary operator should not be nested.
   Person of `if / else` is good in this case.
 
-    `` `Ruby
+    ```   Ruby
     # Bad example
     ? some_condition (? nested_condition nested_something: nested_something_else): something_else
 
@@ -628,18 +628,18 @@ The translation of the following languages ​​are available:
     else
       something_else
     end
-    `` `
+    ```   
 
 * `If x: ...` It must not be used - is deprecated Ruby 1.9 now.
   Let's use the ternary operator instead.
 
-    `` `Ruby
+    ```   Ruby
     # Bad example
     result = if some_condition: something else something_else end
 
     # A good example
     ? result = some_condition something: something_else
-    `` `
+    ```   
 
 * `If x; You should not be using the ...`. Let's use the ternary operator instead.
 
@@ -650,17 +650,17 @@ The translation of the following languages ​​are available:
 
 * `Let's use the`! Instead of `not`.
 
-    `` `Ruby
+    ```   Ruby
     # Bad example - for evaluation order, () is required
     x = (not something)
 
     # A good example
     x =! something
-    `` `
+    ```   
 
 * `!` Let's avoid.
 
-    `` `Ruby
+    ```   Ruby
     # Bad example
     x = 'test'
     # Obscure nil check
@@ -677,12 +677,12 @@ The translation of the following languages ​​are available:
     unless x.nil?
       # Body omitted
     end
-    `` `
+    ```   
 
 * The use of `` or `is prohibited and and`. There is no worth to them.
    Always, `and` `&& instead | Let's use the` |.
 
-    `` `Ruby
+    ```   Ruby
     # Bad example
     # Boolean expression
     if some_condition and some_other_condition
@@ -700,14 +700,14 @@ The translation of the following languages ​​are available:
 
     # Syntax control
     document.saved |? | document.save!
-    `` `
+    ```   
 
 * Ternary operator `run to multiple lines: Avoid`; Let's use the `if / unless` instead?
 
 * I will be preferred when one line, `if / unless` is to guard the clause body.
   There is a control syntax that uses a `| |` && / An alternative other good.
 
-    `` `Ruby
+    ```   Ruby
     # Bad example
     if some_condition
       do_something
@@ -718,11 +718,11 @@ The translation of the following languages ​​are available:
 
     # Good example of another
     some_condition && do_something
-    `` `
+    ```   
 
 * `Unless` is preferred more `if` When the negative form. (| Let's use the syntax `|` or).
 
-    `` `Ruby
+    ```   Ruby
     # Bad example
     do_something if! some_condition
 
@@ -734,12 +734,12 @@ The translation of the following languages ​​are available:
 
     # Good example of another
     some_condition | | do_something
-    `` `
+    ```   
 
 * `It should not be used in the` else `with the unless`.
   You'll want to change in the previously positive conditions.
 
-    `` `Ruby
+    ```   Ruby
     # Bad example
     unless success?
       puts 'failure'
@@ -753,11 +753,11 @@ The translation of the following languages ​​are available:
     else
       puts 'failure'
     end
-    `` `
+    ```   
 
 * `Let's avoid the use of` () `in the if / unless / while / until` syntax.
 
-    `` `Ruby
+    ```   Ruby
     # Bad example
     if (x> 10)
       # Body omitted
@@ -767,11 +767,11 @@ The translation of the following languages ​​are available:
     if x> 10
       # Body omitted
     end
-    `` `
+    ```   
 
 * Do not in `while / until`, and using the `while / until condition do` more than one line.
 
-    `` `Ruby
+    ```   Ruby
     # Bad example
     while x> 5 do
       # Body omitted
@@ -789,11 +789,11 @@ The translation of the following languages ​​are available:
     until x> 5
       # Body omitted
     end
-    `` `
+    ```   
 
 * If a single line, `while / until` Try to guard clause body.
 
-    `` `Ruby
+    ```   Ruby
     # Bad example
     while some_condition
       do_something
@@ -801,21 +801,21 @@ The translation of the following languages ​​are available:
 
     # A good example
     do_something while some_condition
-    `` `
+    ```   
 
 * When the negative form, towards the `until` is preferred than the `while`.
 
-    `` `Ruby
+    ```   Ruby
     # Bad example
     do_something while! some_condition
 
     # A good example
     do_something until some_condition
-    `` `
+    ```   
 
 * In the case of post-decision loop, and `begin / end / until` from `begin / end / while`, the `break` with `Kernel # loop` is preferred.
 
-   `` `Ruby
+   ```   Ruby
    # Bad example
    begin
      puts val
@@ -828,7 +828,7 @@ The translation of the following languages ​​are available:
      val + = 1
      break unless val <0
    end
-   `` `
+   ```   
 
 * (Rake, Rails, and RSpec for example) internal DSL,
   Method with the status becomes "keyword" in Ruby within (or `attr_reader` such as `puts`) Ya
@@ -836,7 +836,7 @@ The translation of the following languages ​​are available:
   Let omitted around the argument `()`.
   In all other methods, let's add a `()` at the time of the method call.
 
-    `` `Ruby
+    ```   Ruby
     class Person
       attr_reader: name,: age
 
@@ -852,21 +852,21 @@ The translation of the following languages ​​are available:
     array.delete (e)
 
     bowling.score.should == 0
-    `` `
+    ```   
 
 * Let omitted outside the options hash of implicit `{}`.
 
-    `` `Ruby
+    ```   Ruby
     # Bad example
     user.set ({name: 'John', age: 45, permissions: {read: true}})
 
     # A good example
     user.set (name: 'John', age: 45, permissions: {read: true})
-    `` `
+    ```   
 
 * The argument of the method to be used as part of an internal DSL, let's skip `{}` () `,` outer
 
-    `` `Ruby
+    ```   Ruby
     class Person <ActiveRecord :: Base
       # Bad example
       validates (: name, {presence: true, length: {within: 1 .. 10}})
@@ -874,11 +874,11 @@ The translation of the following languages ​​are available:
       # A good example
       validates: name, presence: true, length: {within: 1 .. 10}
     end
-    `` `
+    ```   
 
 * Let's omission of the method call with no arguments `()`.
 
-    `` `Ruby
+    ```   Ruby
     # Bad example
     Kernel.exit! ()
     2.even? ()
@@ -890,7 +890,7 @@ The translation of the following languages ​​are available:
     2.even?
     fork
     'Test'. Upcase
-    `` `
+    ```   
 
 * If the `{...}` is preferred more `do ... end` a block of one line.
   Avoid the `{...}` block in multiline
@@ -899,7 +899,7 @@ The translation of the following languages ​​are available:
   (Such as DSL or a specific Rakefiles for example)
   Avoid in the method chain `do ... end`.
 
-    `` `Ruby
+    ```   Ruby
     names = ['Bozhidar', 'Steve', 'Sarah']
 
     # Bad example
@@ -917,7 +917,7 @@ The translation of the following languages ​​are available:
 
     # A good example
     names.select. {| name |? name.start_with ('S')} map {| name | name.upcase}
-    `` `
+    ```   
 
     `But Some people may argue that OK method chaining of multiple lines using the {...}`,
     I want you to ask yourself - Will it be really easy to read this code?
@@ -927,7 +927,7 @@ The translation of the following languages ​​are available:
   Let's consider that you explicitly block argument.
   However, be careful to performance in that block is converted to `Proc`.
 
-    `` `Ruby
+    ```   Ruby
     require 'tempfile'
 
     # Bad example
@@ -947,11 +947,11 @@ The translation of the following languages ​​are available:
     with_tmp_dir do | dir |
       puts "dir is accessible as parameter and pwd is set: # {dir}"
     end
-    `` `
+    ```   
 
 * Avoid unnecessary `return` syntax on control.
 
-    `` `Ruby
+    ```   Ruby
     # Bad example
     def some_method (some_arr)
       return some_arr.size
@@ -961,11 +961,11 @@ The translation of the following languages ​​are available:
     def some_method (some_arr)
       some_arr.size
     end
-    `` `
+    ```   
 
 * (Required only in writing to the attribute of itself) unnecessary `self` Avoid.
 
-    `` `Ruby
+    ```   Ruby
     # Bad example
     def ready?
       if self.last_reviewed_at> self.last_updated_at
@@ -983,12 +983,12 @@ The translation of the following languages ​​are available:
       end
       status ==: verified
     end
-    `` `
+    ```   
 
 * Naturally, you hide the method in local variable,
   Avoid as long as they are not equivalent.
 
-    `` `Ruby
+    ```   Ruby
     class Foo
       attr_accessor: options
 
@@ -1012,12 +1012,12 @@ The translation of the following languages ​​are available:
         end
       end
     end
-    `` `
+    ```   
 
 * Do not unquoted `()` the assignment part, it is used in the conditional expression return value of `=`.
   This is very famous as a safe assignment * in * conditional expression is in Rubyist.
 
-    `` `Ruby
+    ```   Ruby
     # (+ Warning is issued) bad example
     if v = array.grep (/ foo /)
       do_something (v)
@@ -1036,31 +1036,31 @@ The translation of the following languages ​​are available:
       do_something (v)
       ...
     end
-    `` `
+    ```   
 
 * The initialization of variables, `| Let's use freely =` |.
 
-    `` `Ruby
+    ```   Ruby
     # Name is not equal to false or nil, I will be initialized with Bozhidar
     name | | = 'Bozhidar'
-    `` `
+    ```   
 
 * The `boolean variable | you should not be using the =` |
   (Let's consider what happens when the current value was `false`).
 
-    `` `Ruby
+    ```   Ruby
     # Bad example - true will contain any false, even if enabled
     enabled | | = true
 
     # A good example
     enabled = true if enabled.nil?
-    `` `
+    ```   
 
 * Pre-processing of the variable you do not know value is entering Let's use `=` &&.
   `&& =` Because you change the value only when the variable exists and if I use the,
   You can remove is used to verify the presence unnecessary `if`.
 
-    `` `Ruby
+    ```   Ruby
     # Bad example
     if something
       something = something.downcase
@@ -1074,13 +1074,13 @@ The translation of the following languages ​​are available:
 
     # Example better
     something && = something.downcase
-    `` `
+    ```   
 
 * Avoid blatant use of the equality operator `===`.
   As the name suggests, it has been used in the determination of conditions for `case`,
   And it can be confusing if you use it in the outside.
 
-    `` `Ruby
+    ```   Ruby
     # Bad example
     Array === something
     (1 .. 100) === 7
@@ -1090,31 +1090,31 @@ The translation of the following languages ​​are available:
     something.is_a? (Array)
     (1 .. 100). Include? (7)
     some_string = ~ / something /
-    `` `
+    ```   
 
 * Perl-style: it; Let's avoid the use (`$ $` or `such as`) of a special variable.
   They are very cryptic,
   Motivation is Soga as they are used by a script other than the one line.
   `Let's using an alias is kind to a person that is provided by the English` library.
 
-    `` `Ruby
+    ```   Ruby
     # Bad example
     $:. Unshift File.dirname (__FILE__)
 
     # A good example
     require 'English'
     $ LOAD_PATH.unshift File.dirname (__FILE__)
-    `` `
+    ```   
 
 * You should not put any space between the beginning of the method name and argument of `(`.
 
-    `` `Ruby
+    ```   Ruby
     # Bad example
     f (3 + 2) + 1
 
     # A good example
     f (3 + 2) + 1
-    `` `
+    ```   
 
 * The first argument of the method if starting with `(`,
   Let's use `()` method to call at all times.
@@ -1127,7 +1127,7 @@ The translation of the following languages ​​are available:
 * Let's have a new literal to lambda that has the body of a single line.
   `Let's use when they span multiple lines lambda`.
 
-    `` `Ruby
+    ```   Ruby
     # Bad example
     l = lambda {| a, b | a + b}
     l.call (1, 2)
@@ -1146,21 +1146,21 @@ The translation of the following languages ​​are available:
       tmp = a * 7
       tmp * b / 50
     end
-    `` `
+    ```   
 
 * `I prefer` proc `more Proc.new`.
 
-    `` `Ruby
+    ```   Ruby
     # Bad example
     p = Proc.new {| n | puts n}
 
     # A good example
     p = proc {| n | puts n}
-    `` `
+    ```   
 
 * I prefer the `proc.call ()` more `proc. ()` And [] `` proc to call the proc and lambda.
 
-    `` `Ruby
+    ```   Ruby
     # Bad example - it appears to be similar to the access of an enumerated type
     l = -> (v) {puts v}
     l [1]
@@ -1172,17 +1172,17 @@ The translation of the following languages ​​are available:
     # A good example
     l = -> (v) {puts v}
     l.call (1)
-    `` `
+    ```   
 
 * Let's use `_` The block argument is not used.
 
-    `` `Ruby
+    ```   Ruby
     # Bad
     result = hash.map {| k, v | v + 1}
 
     # Good
     result = hash.map {| _, v | v + 1}
-    `` `
+    ```   
 
 * `Let's using the` $ stdout / $ stderr / $ stdin `instead of STDOUT / STDERR / STDIN`.
   `STDOUT / STDERR / STDIN` is a constant,
@@ -1196,7 +1196,7 @@ The translation of the following languages ​​are available:
 
 * I prefer and `sprintf` from `String #%` method inexplicable `format`.
 
-    `` `Ruby
+    ```   Ruby
     # Bad example
     '% D% d'% [20, 10]
     # => '20 10 '
@@ -1215,11 +1215,11 @@ The translation of the following languages ​​are available:
     # A good example
     format ('% {first}% {second}', first: 20, second: 10)
     # => '20 10 '
-    `` `
+    ```   
 
 * I prefer `Array # join` than the mysterious `Array # *` method.
 
-    `` `Ruby
+    ```   Ruby
     # Bad example
     % W (one two three) * ','
     # => 'One, two, three'
@@ -1227,12 +1227,12 @@ The translation of the following languages ​​are available:
     # A good example
     % W (one two three). Join (',')
     # => 'One, two, three'
-    `` `
+    ```   
 
 * I do not know whether the argument is an array, but when you want to process and treat it as an array,
   Than demonstrate the check of the array, let's use instead and `[* var]` `Array () to`.
 
-    `` `Ruby
+    ```   Ruby
     # Bad example
     paths = [paths] unless paths.is_a? Array
     paths.each {| path | do_something (path)}
@@ -1242,12 +1242,12 @@ The translation of the following languages ​​are available:
 
     # (I'm easy to read and a little) a good example
     . Array (paths) each {| path | do_something (path)}
-    `` `
+    ```   
 
 * Instead of complex comparison logic,
   Let's use and as long as the `Range` possible `Comparable # between?`.
 
-    `` `Ruby
+    ```   Ruby
     # Bad example
     do_something if x> = 1000 && x <= 2000
 
@@ -1256,12 +1256,12 @@ The translation of the following languages ​​are available:
 
     # A good example
     do_something if x.between? (1000, 2000)
-    `` `
+    ```   
 
 * `==` Let's using the determination method than the comparison that makes clear the.
   Comparison of the number is OK.
 
-    `` `Ruby
+    ```   Ruby
     # Bad example
     if x% 2 == 0
     end
@@ -1287,13 +1287,13 @@ The translation of the following languages ​​are available:
 
     if x == 0
     end
-    `` `
+    ```   
 
 * `Let's avoid the use of BEGIN` blocks.
 
 * The `Do not use the END` block. Let's use the `Kernel # at_exit` instead.
 
-    `` `Ruby
+    ```   Ruby
     # Bad example
 
     END {puts 'Goodbye!'}
@@ -1301,7 +1301,7 @@ The translation of the following languages ​​are available:
     # A good example
 
     at_exit {puts 'Goodbye!'}
-    `` `
+    ```   
 
 * Avoid the use of flip-flop.
 
@@ -1310,7 +1310,7 @@ The translation of the following languages ​​are available:
   Guard clause, to go out from the function as far as possible,
   This is a conditional expression is declared near the beginning of the function.
 
-    `` `Ruby
+    ```   Ruby
     # Bad example
       def compute_thing (thing)
         if thing [: foo]
@@ -1330,16 +1330,16 @@ The translation of the following languages ​​are available:
         return re_compute (thing) unless thing [: foo] [: bar]
         partial_compute (thing)
       end
-    `` `
+    ```   
 
-# # Naming convention
+## Naming convention
 
 > That the programming only difficult one is the designation and cache invalidation. <br/>
 > - Phil Karlton
 
 * Let's named in English identifier.
 
-    `` `Ruby
+    ```   Ruby
     # Bad example - identifier is a character string a non-ascii
     заплата = 1_000
 
@@ -1348,11 +1348,11 @@ The translation of the following languages ​​are available:
 
     # A good example
     salary = 1_000
-    `` `
+    ```   
 
 * Let's using the `snake_case` symbol, methods, variables.
 
-    `` `Ruby
+    ```   Ruby
     # Bad example
     : 'Some symbol'
     : SomeSymbol
@@ -1374,11 +1374,11 @@ The translation of the following languages ​​are available:
     def some_method
       ...
     end
-    `` `
+    ```   
 
 * Let's using the `CamelCase` The module or class. (Acronym HTTP, RFC, such as XML Keep your case).
 
-    `` `Ruby
+    ```   Ruby
     # Bad example
     class Someclass
       ...
@@ -1400,17 +1400,17 @@ The translation of the following languages ​​are available:
     class SomeXML
       ...
     end
-    `` `
+    ```   
 
 * Let's using the `SCREAMING_SNAKE_CASE` The other constants.
 
-    `` `Ruby
+    ```   Ruby
     # Bad example
     SomeConst = 5
 
     # A good example
     SOME_CONST = 5
-    `` `
+    ```   
 
 * Let's put an end to `?` (Boolean value is returned) the condition determination method
   (Ie, skip as `Array # empty?`).
@@ -1421,7 +1421,7 @@ The translation of the following languages ​​are available:
   Is used to indicate that it is a * dangerous *,
   Let's put a `! 'At the end.
 
-    `` `Ruby
+    ```   Ruby
     # Bad example - it is a method 'safe'
     class Person
       def update!
@@ -1442,11 +1442,11 @@ The translation of the following languages ​​are available:
       def update
       end
     end
-    `` `
+    ```   
 
 * As much as possible, let's define a safe method from the point of view of a dangerous method.
 
-    `` `Ruby
+    ```   Ruby
     class Array
       def flatten_once!
         res = []
@@ -1462,18 +1462,18 @@ The translation of the following languages ​​are available:
         dup.flatten_once!
       end
     end
-    `` `
+    ```   
 
 * When using `reduce` along with the short block, the argument `| Let's named` | a, e.
   (Accumulator, element).
 * When you define a binary operator, let's argument using the `other`
   (Meaning, so will be different and `<<` and `[]`, which is an exception to this rule).
 
-    `` `Ruby
+    ```   Ruby
     def + (other)
       # Body omitted
     end
-    `` `
+    ```   
 
 * More `collect` more `detect` more `find_all` `map`, `find`, `select`
   `` Reduce `, I prefer the` size `more` length `more inject`.
@@ -1491,26 +1491,26 @@ The translation of the following languages ​​are available:
   `Let's using the` map + flatten `more flat_map`.
   `Whereas to flatten all of the array, only one-dimensional and flat in an array is` flat_map `flatten`.
 
-    `` `Ruby
+    ```   Ruby
     # Bad example
     all_songs = users.map. (&: songs) flatten.uniq
 
     # A good example
     all_songs = users.flat_map. (&: songs) uniq
-    `` `
+    ```   
 
 * `Let's using the` reverse_each `instead of reverse.each`.
   `Reverse_each` does not create a new array, it is an advantage.
 
-    `` `Ruby
+    ```   Ruby
     # Bad example
     array.reverse.each {...}
 
     # A good example
     array.reverse_each {...}
-    `` `
+    ```   
 
-# # Comments
+## Comments
 
 > Good code has a great document.
 > When you are trying to add comments to the code exactly,
@@ -1525,10 +1525,10 @@ The translation of the following languages ​​are available:
   [One space] Let's use the (http://en.wikipedia.org/wiki/Sentence_spacing) after the period.
 * Avoid any extra comments.
 
-    `` `Ruby
+    ```   Ruby
     # Bad example
     counter + = 1 # Increments counter by one.
-    `` `
+    ```   
 
 * Comments Let's keep up-to-date.
   Comments outdated, is worse than no comment.
@@ -1540,7 +1540,7 @@ The translation of the following languages ​​are available:
   Let's do refactoring to the code self-explanatory
   and (do not do or do - it. Yoda -'s story "try").
 
-# # # Comments
+### Comments
 
 * Annotations Would you like to write just above the code normally associated.
 * After the keyword annotation `: let's continue the`.
@@ -1548,23 +1548,23 @@ The translation of the following languages ​​are available:
 * If you take more than one line to describe the problem is if,
   Let's indentation are two spaces after the `#` following lines.
 
-    `` `Ruby
+    ```   Ruby
     def bar
       # FIXME:. This has crashed occasionally since v3.2.1 It may
       # Be related to the BarBazUtil upgrade.
       baz (: quux)
     end
-    `` `
+    ```   
 
 * If the problem is clear, then description is redundant,
   At the end of the line that has a problem, annotations not body only should wear.
   This usage is an exception, not the rule.
 
-    `` `Ruby
+    ```   Ruby
     def bar
       sleep 100 # OPTIMIZE
     end
-    `` `
+    ```   
 
 * Let's use the `TODO` If you want to write down to be added later, features and functions not now.
 * Let's use the `FIXME` If you want to write down the broken code you need to fix.
@@ -1575,11 +1575,11 @@ The translation of the following languages ​​are available:
 * If you feel properly, I do not have to be using your own keywords other,
   You should write to something like that and `README` keywords of them.
 
-# # Class
+## Class
 
 * We will continue with our consistent structure by placing the class definition.
 
-    `` `Ruby
+    ```   Ruby
     class Person
       # I is the first thing we will do the include and extend
       extend SomeModule
@@ -1613,12 +1613,12 @@ The translation of the following languages ​​are available:
       def some_private_method
       end
     end
-    `` `
+    ```   
 
 * That the class has only class method is a module is preferred.
   It makes sense only to generating the instance class.
 
-    `` `Ruby
+    ```   Ruby
     # Bad example
     class SomeClass
       def self.some_method
@@ -1640,12 +1640,12 @@ The translation of the following languages ​​are available:
       def some_other_method
       end
     end
-    `` `
+    ```   
 
 * If you want to the class method and an instance method of the module,
   `` Module_function `is preferred to extend self`.
 
-    `` `Ruby
+    ```   Ruby
     # Bad example
     module Utilities
       extend self
@@ -1671,7 +1671,7 @@ The translation of the following languages ​​are available:
         # Do some more stuff
       end
     end
-    `` `
+    ```   
 
 * When carrying out the design of the class hierarchy,
   Replace principle of Liskov] (http://ja.wikipedia.org/wiki/% E3% 83% AA% E3% 82% B9% E3% 82% B3% E3% 83% 95% E3% 81% AE% E7% BD% AE% E6% 8F% 9B% E5% 8E% 9F% E5% 89% 87).
@@ -1681,7 +1681,7 @@ The translation of the following languages ​​are available:
   Let's keep to.
 * In order to describe the province of the class, let's provide a `to_s` method always.
 
-    `` `Ruby
+    ```   Ruby
     class Person
       attr_reader: first_name,: last_name
 
@@ -1694,11 +1694,11 @@ The translation of the following languages ​​are available:
         "# {@ First_name} # {@ last_name}"
       end
     end
-    `` `
+    ```   
 
 * The definition of mutator and accessor simple, let's use the `attr` group.
 
-    `` `Ruby
+    ```   Ruby
     # Bad example
     class Person
       def initialize (first_name, last_name)
@@ -1724,11 +1724,11 @@ The translation of the following languages ​​are available:
         @ Last_name = last_name
       end
     end
-    `` `
+    ```   
 
 * `Let's avoid the use of attr`. Let's use or `attr_reader` a `attr_accessor` instead.
 
-    `` `Ruby
+    ```   Ruby
     # Bad example - (it has been deprecated in 1.9) does not make only one accessor
     attr: something, true
     This is the same as three # attr_reader: attr: one,: two,
@@ -1736,12 +1736,12 @@ The translation of the following languages ​​are available:
     # A good example
     attr_accessor: something
     attr_reader: one,: two,: three
-    `` `
+    ```   
 
 * `Let's consider the use of Struct.new`,
   It makes it simple definitions accessor, comparison operators and constructors.
 
-    `` `Ruby
+    ```   Ruby
     # A good example
     class Person
       attr_accessor: first_name,: last_name
@@ -1755,7 +1755,7 @@ The translation of the following languages ​​are available:
     # Example better
     Person = Struct.new (: first_name,: last_name) do
     end
-    `` ``
+    ```   `
 
 * `This is not to extend the Struct.new` - it is a new class already.
   It results in an extra class level,
@@ -1764,17 +1764,17 @@ The translation of the following languages ​​are available:
 * If you want to offer additional ways of instantiating a class,
   Let's consider adding a factory method.
 
-    `` `Ruby
+    ```   Ruby
     class Person
       def self.create (options_hash)
         # Body omitted
       end
     end
-    `` `
+    ```   
 
 * [Duck typing] (http://ja.wikipedia.org/wiki/% E3% 83% 80% E3% 83% 83% E3% 82% AF% E3% 83% BB% E3% 82% than inheritance 82% B0) BF% E3% 82% A4% E3% 83% 94% E3% 83% B3% E3% is preferred.
 
-    `` `Ruby
+    ```   Ruby
     # Bad example
     class Animal
       # Abstract method
@@ -1808,11 +1808,11 @@ The translation of the following languages ​​are available:
         puts 'Bau! Bau!'
       end
     end
-    `` `
+    ```   
 
 * Behavior in inheritance because "awkward", let's avoid using class variables (`@ @`).
 
-    `` `Ruby
+    ```   Ruby
     class Parent
       @ @ Class_var = 'parent'
 
@@ -1826,7 +1826,7 @@ The translation of the following languages ​​are available:
     end
 
     Parent.print_class_var # => will print "child"
-    `` `
+    ```   
 
     As can be seen all the classes in the class hierarchy,
     I will try to share one class variable actually.
@@ -1839,7 +1839,7 @@ The translation of the following languages ​​are available:
   In order to emphasize that it is applied to a method identifier after defining visibility,
   Let's put a blank line at the top and bottom of the identifier.
 
-    `` `Ruby
+    ```   Ruby
     class SomeClass
       def public_method
         # ...
@@ -1855,12 +1855,12 @@ The translation of the following languages ​​are available:
         # ...
       end
     end
-    `` `
+    ```   
 
 * Let's using `def self.method` When you define a singleton method.
   Since not repeat the class name, you will be able to refactor easily.
 
-    `` `Ruby
+    ```   Ruby
     class TestClass
       # Bad example
       def TestClass.some_method
@@ -1884,36 +1884,36 @@ The translation of the following languages ​​are available:
         end
       end
     end
-    `` `
+    ```   
 
-# # Exception
+## Exception
 
 * Let's using the `fail` is an exception occurs.
-  `Let's use only when you can catch an exception, generating again raise`
+  Let's use only when you can catch an exception, generating again raise
   (because, instead of fall is here, it is because it raises an exception with a purpose explicitly).
 
-    `` `Ruby
+    ```   Ruby
     begin
       fail 'Oops'
     rescue => error
       raise if error.message! = 'Oops'
     end
-    `` `
+    ```   
 
 * 2 argument in `fail / raise`, it is suggested that you do not explicitly `RuntimeError`.
 
-    `` `Ruby
+    ```   Ruby
     # Bad example
     fail RuntimeError, 'message'
 
     # Good example - RuntimeError occurs by default
     fail 'message'
-    `` `
+    ```   
 
 * Instead of the exception instance,
   Message and exception class is divided `fail / raise` is preferred.
 
-    `` `Ruby
+    ```   Ruby
     # Bad example
     fail SomeException.new ('message')
     # `It is important to note that writing to fail SomeException.new ('message'), and backtrace` does not exist.
@@ -1921,7 +1921,7 @@ The translation of the following languages ​​are available:
     # A good example
     fail SomeException, 'message'
     # `Is consistent with the usage fail SomeException, 'message', the backtrace`
-    `` `
+    ```   
 
 `* Do not block from ensure` If you want to `return`.
   If you want to return a value explicitly from `ensure` if is,
@@ -1929,7 +1929,7 @@ The translation of the following languages ​​are available:
   Let's return the values ​​as exceptions, such as if it had not occurred.
   In effect, the exception is silently discarded.
 
-    `` `Ruby
+    ```   Ruby
     def foo
       begin
         fail
@@ -1937,11 +1937,11 @@ The translation of the following languages ​​are available:
         return 'very bad idea'
       end
     end
-    `` `
+    ```   
 
 * Where possible, let's begin with a block * of * implicit.
 
-    `` `Ruby
+    ```   Ruby
     # Bad example
     def foo
       begin
@@ -1957,12 +1957,12 @@ The translation of the following languages ​​are available:
     rescue
       # Failure handling goes here
     end
-    `` `
+    ```   
 
 ** (This is a word made by Avdi Grimm) method * that uncertainty
   Let's soften the spread of `begin` using.
 
-    `` `Ruby
+    ```   Ruby
     # Bad example
     begin
       something_that_might_fail
@@ -1986,11 +1986,11 @@ The translation of the following languages ​​are available:
     with_io_error_handling {something_that_might_fail}
 
     with_io_error_handling {something_else_that_might_fail}
-    `` `
+    ```   
 
 * It must not be a cover-up exception.
 
-    `` `Ruby
+    ```   Ruby
     # Bad example
     begin
       # An exception occurs here
@@ -2000,11 +2000,11 @@ The translation of the following languages ​​are available:
 
     # Bad example
     do_something rescue nil
-    `` `
+    ```   
 
-* `Let's avoid the guard clause of the rescue`.
+* Let's avoid the guard clause of the rescue.
 
-    `` `Ruby
+    ```   Ruby
     # Bad example - to the island to catch all the classes that inherit it with StandardError
     read_file rescue handle_error ($!)
 
@@ -2014,12 +2014,12 @@ The translation of the following languages ​​are available:
     rescue Errno :: ENOENT => ex
       handle_error (ex)
     end
-    `` `
+    ```   
 
 
 * You are not allowed to use the exception to the control flow.
 
-    `` `Ruby
+    ```   Ruby
     # Bad example
     begin
       n / d
@@ -2033,12 +2033,12 @@ The translation of the following languages ​​are available:
     else
       n / d
     end
-    `` `
+    ```   
 
 * `To` rescue `is the Exception` Avoid.
   Since the signal of `exit` also capture, this will require -9 `` kill.
 
-    `` `Ruby
+    ```   Ruby
     # Bad example
     begin
       # Calls to exit and kill signals will be caught (except kill -9)
@@ -2064,12 +2064,12 @@ The translation of the following languages ​​are available:
       # Exception handling
     end
 
-    `` `
+    ```   
 
 * Let's placed on top of the `rescue` chain a more detailed exception.
   And if not, it will not be `rescue` never.
 
-    `` `Ruby
+    ```   Ruby
     # Bad example
     begin
       # Some code
@@ -2087,11 +2087,11 @@ The translation of the following languages ​​are available:
     rescue Exception => e
       # Some handling
     end
-    `` `
+    ```   
 
 * The program included the external resources, let's open at `ensure`
 
-    `` `Ruby
+    ```   Ruby
     f = File.open ('testfile')
     begin
       # .. Process
@@ -2100,7 +2100,7 @@ The translation of the following languages ​​are available:
     ensure
       f.close unless f.nil?
     end
-    `` `
+    ```   
 
 * That it than to introduce a new exception class, using the exception of the basic class library is preferred.
 
@@ -2109,7 +2109,7 @@ The translation of the following languages ​​are available:
 * If a literal array or hash is preferred.
   (Although is that, except for the case to pass arguments to the constructor)
 
-    `` `Ruby
+    ```   Ruby
     # Bad example
     arr = Array.new
     hash = Hash.new
@@ -2117,36 +2117,36 @@ The translation of the following languages ​​are available:
     # A good example
     arr = []
     hash = {}
-    `` `
+    ```   
 
 * (Or an empty string, there are no spaces in the string) array syntax of the string,
   `% W` person of the literal is preferred.
   This rule is applied to an array of two or more elements.
 
-    `` `Ruby
+    ```   Ruby
     # Bad example
     STATES = ['draft', 'open', 'closed']
 
     # A good example
     STATES =% w (draft open closed)
-    `` `
+    ```   
 
 * `% I` is preferred when the sequence of symbols is required
   (Maintaining compatibility with Ruby 1.9 and you do not need).
   This rule is applied to an array of two or more elements.
 
-    `` `Ruby
+    ```   Ruby
     # Bad example
     STATES = [: draft,: open,: closed]
 
     # A good example
     STATES =% i (draft open closed)
-    `` `
+    ```   
 
 * The `Avoid`, behind the last element and Array `of` Hash `literal`.
   Avoid especially when it is not divided into multiple lines.
 
-    `` `Ruby
+    ```   Ruby
     # Bad example - you can move, add, delete elements easily, but still it is not preferred.
     VALUES = [
                1001,
@@ -2159,14 +2159,14 @@ The translation of the following languages ​​are available:
 
     # A good example
     VALUES = [1001, 2020, 3333]
-    `` `
+    ```   
 
 * You make a big gap in the array Avoid.
 
-    `` `Ruby
+    ```   Ruby
     arr = []
     arr [100] = 1 # now you have an array with lots of nils
-    `` `
+    ```   
 
 * If you want to access the beginning or end of the array,
   `And` first `` last `is preferred more` [-1] or `[0]`.
@@ -2176,32 +2176,32 @@ The translation of the following languages ​​are available:
   Internal and intuitive operation of `Array`, the speed of the discovery of element `Hash` has put together this.
 * Symbol is preferred over string hash keys.
 
-    `` `Ruby
+    ```   Ruby
     # Bad example
     hash = {'one' => 1, 'two' => 2, 'three' => 3}
 
     # A good example
     hash = {one: 1, two: 2, three: 3}
-    `` `
+    ```   
 
 * The use of the hash key to an object that can be changed to Avoid.
 
 * In the case of the symbol, key let using the syntax of hash literal.
 
-    `` `Ruby
+    ```   Ruby
     # Bad example
     hash = {: one => 1,: two => 2,: three => 3}
 
     # A good example
     hash = {one: 1, two: 2, three: 3}
-    `` `
+    ```   
 
 * More `Hash # has_key?` A `Hash # key?`,
   `Let's using the` Hash # value? `More Hash # has_value?`.
     [Here] (http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-core/43765)
   In Matz is as stated, abolition have been investigated for long notation.
 
-    `` `Ruby
+    ```   Ruby
     # Bad example
     ? hash.has_key (: test)
     hash.has_value? (value)
@@ -2209,11 +2209,11 @@ The translation of the following languages ​​are available:
     # A good example
     ? hash.key (: test)
     hash.value? (value)
-    `` `
+    ```   
 
 * When dealing with key should be present, let's use the `Hash # fetch`.
 
-    `` `Ruby
+    ```   Ruby
     heroes = {batman: 'Bruce Wayne', superman: 'Clark Kent'}
     # Bad example - you might not be able to notice immediately, even if there is an error if
     heroes [: batman] # => "Bruce Wayne"
@@ -2221,12 +2221,12 @@ The translation of the following languages ​​are available:
 
     # Good example - fetch so throw a KeyError, problem will reveal
     heroes.fetch (: supermann)
-    `` `
+    ```   
 
 * In order to not to use your own logic,
   `Let's introduce a default value in the Hash # fetch` through.
 
-   `` `Ruby
+   ```   Ruby
    batman = {name: 'Bruce Wayne', is_evil: false}
 
    # Bad example - if the value is determined to be false came in, it may not work to get off to be wanted
@@ -2234,11 +2234,11 @@ The translation of the following languages ​​are available:
 
    # A good example - I will work correctly value is determined to be false, even if on
    batman.fetch (: is_evil, true) # => false
-   `` `
+   ```   
 
 * For `Hash # fetch`, by using the block instead of the default value is preferred.
 
-   `` `Ruby
+   ```   Ruby
    batman = {name: 'Bruce Wayne'}
 
    # Bad example - the default value is used, I will be evaluated first
@@ -2247,7 +2247,7 @@ The translation of the following languages ​​are available:
 
    # Good example - block will be evaluated later. So, KeyError will trigger the evaluation
    batman.fetch (: powers) {get_batman_powers}
-   `` `
+   ```   
 
 * Let's trust that the hash that are ordered in Ruby 1.9 now.
 * Do not you'll make changes when you are scanning the collection.
@@ -2256,48 +2256,48 @@ The translation of the following languages ​​are available:
 
 * I prefer the string inserted in place of the string concatenation.
 
-    `` `Ruby
+    ```   Ruby
     # Bad example
     email_with_name = user.name + '<' + user.email + '>'
 
     # A good example
     email_with_name = "# {user.name} <# {user.email}>"
-    `` `
+    ```   
 
 * Let's consider putting a space in the string is inserted.
   Code separate from the string becomes more clear.
 
-    `` `Ruby
+    ```   Ruby
     "# {User.last_name}, # {user.first_name}"
-    `` `
+    ```   
 
 * Or when there is no need for string insertion, if there is no special character and `\ t` of `\ n `` '`, etc.,
   Single quotes is preferred.
 
-    `` `Ruby
+    ```   Ruby
     # Bad example
     name = "Bozhidar"
 
     # A good example
     name = 'Bozhidar'
-    `` `
+    ```   
 
 * You should not be using the character literal syntax `? X`.
   It is redundant basically from Ruby 1.9 -
   `? X` will be converted to (a one-character string) `'x'`
 
-    `` `Ruby
+    ```   Ruby
     # Bad example
     char =? c
 
     # A good example
     char = 'c'
-    `` `
+    ```   
 
 * Around the global variable or instance variable that is inserted in the string
   `You should not be omitted {}`.
 
-    `` `Ruby
+    ```   Ruby
     class Person
       attr_reader: first_name,: last_name
 
@@ -2323,7 +2323,7 @@ The translation of the following languages ​​are available:
 
     # A good example
     puts "$ global = # {$ global}"
-    `` `
+    ```   
 
 * If you need to make large chunks of data, let's avoid the use of `String # +`.
   Instead, we'll use a `String # <<`.
@@ -2331,7 +2331,7 @@ The translation of the following languages ​​are available:
   `It is always faster than the String # +`,
   `To the island by creating a new object of a lot of String # +`.
 
-    `` `Ruby
+    ```   Ruby
     Example # fast and well
     html =''
     html << '<h1> Page title </ h1>'
@@ -2339,13 +2339,13 @@ The translation of the following languages ​​are available:
     paragraphs.each do | paragraph |
       html << "<p> # {paragraph} </ p>"
     end
-    `` `
+    ```   
 
 * When using a here document of more than one line,
   Must keep in mind that it arises also holds leading spaces.
   It is practical to employ a margin to remove excess space.
 
-    `` `Ruby
+    ```   Ruby
     code = <<-END.gsub (/ ^ \ s + \ | /,'')
       | Def test
       | Some_method
@@ -2353,9 +2353,9 @@ The translation of the following languages ​​are available:
       | End
     END
     # => "Def test \ n some_method \ n other_method \ nend \ n"
-    `` `
+    ```   
 
-# # Regular expression
+## Regular expression
 
 > When you run into a problem, I think "Yeah, I'll use the regular expression" and.
 > There are two problems there. <br/>
@@ -2365,24 +2365,24 @@ The translation of the following languages ​​are available:
   Let's use the `string ['text']`: Do not use regular expressions.
 * For the sake of simplicity, let's pass the regular expression directly into the string indices.
 
-    `` `Ruby
+    ```   Ruby
     match = string [/ regexp /] # get content of matched regexp
     first_group = string [/ text (grp) /, 1] # get content of captured group
     string [/ text (grp) /, 1] = 'replace' # string => 'text replace'
-    `` `
+    ```   
 
 * When it is not necessary to use the result of the captured, let's using the group that is not captured.
 
-    `` `Ruby
+    ```   Ruby
     / | Bad example (first second) / #
     /: | A good example (first second?) / #
-    `` `
+    ```   
 
 * You should not be using the variable cryptic Perl legacy of indicating the value that matched the regular expression at the end
   (`$ 1`, and `$ 2`).
   Let `Regexp.last_match using the [n]` instead.
 
-    `` `Ruby
+    ```   Ruby
     / (Regexp) / = ~ string
     ...
 
@@ -2391,14 +2391,14 @@ The translation of the following languages ​​are available:
 
     # A good example
     process Regexp.last_match [1]
-    `` `
+    ```   
 
 
 * Because become difficult to follow what values ​​are entered,
   You use the group you ordered Avoid.
   Let's use a group named instead.
 
-    `` `Ruby
+    ```   Ruby
     # Bad example
     / (Regexp) / = ~ string
     ...
@@ -2408,7 +2408,7 @@ The translation of the following languages ​​are available:
     / (? <meaningful_var> Regexp) / = ~ string
     ...
     process meaningful_var
-    `` `
+    ```   
 
 * Within the character class, characters that have a special meaning is small you need to be careful:
   `^`, `-`, `\`, `Only]` is because it has a special meaning,
@@ -2420,18 +2420,18 @@ The translation of the following languages ​​are available:
   `\ Let's use A`, the `\ z`
   (It is suggested that you do not confuse it is equivalent to `\ n? \ Z` and `\ Z`).
 
-    `` `Ruby
+    ```   Ruby
     string = "some injection \ nusername"
     string [/ ^ username $ /] # matches
     string [/ \ Ausername \ z /] # don't match
-    `` `
+    ```   
 
 * Let's use the `x` identifier for complex regular expression.
   It is easy to read more by using this,
   I will be able to use the handy comment.
   It is important to note that space is ignored.
 
-    `` `Ruby
+    ```   Ruby
     regexp =% r {
       start # some text
       \ S # white space char
@@ -2439,17 +2439,17 @@ The translation of the following languages ​​are available:
       (:? Alt1 | alt2) # some alternation
       end
     } X
-    `` `
+    ```   
 
 * `Complex substitution at sub` / `gsub`, but it is possible to use a hash or block.
 
-# #% Literal
+##% Literal
 
 * A string of one-line insertion and `" `both is entered,
   `% Let's use the ()` (short of `% Q ()`).
   I prefer here documents when more than one line.
 
-    `` `Ruby
+    ```   Ruby
     # (There is no need of insertion) bad example
     % (<div Class="text"> Some text </ div>)
     # Should be '<div class="text"> Some text </ div>'
@@ -2464,7 +2464,7 @@ The translation of the following languages ​​are available:
 
     # (One line insertion is necessary, and double quotes, a) a good example
     % (<tr> <td Class="name"> # {name} </ td>)
-    `` `
+    ```   
 
 * As long as both the `'` and `" `in the string is not included,
   `% Avoid the use of q`.
@@ -2472,7 +2472,7 @@ The translation of the following languages ​​are available:
   More of regular string literals more readable,
   Should be recommended.
 
-    `` `Ruby
+    ```   Ruby
     # Bad example
     name =% q (Bruce Wayne)
     time =% q (8 o'clock)
@@ -2482,11 +2482,11 @@ The translation of the following languages ​​are available:
     name = 'Bruce Wayne'
     time = "8 o'clock"
     question = '"What did you say?"'
-    `` `
+    ```   
 
 * '/' Is only more than * one * regular expression, we'll use a `% r`.
 
-    `` `Ruby
+    ```   Ruby
     # Bad example
     % R (\ s +)
 
@@ -2496,19 +2496,19 @@ The translation of the following languages ​​are available:
 
     # A good example
     % R (^ / blog/2011 / (. *) $)
-    `` `
+    ```   
 
 * Backquote is included in the command to call (it is not quite happen but) as long as there is no thing,
   `% Avoid the use of x`.
 
-    `` `Ruby
+    ```   Ruby
     # Bad example
     date =% x (date)
 
     # A good example
     date = `date`
     echo =% x (echo `date`)
-    `` `
+    ```   
 
 * `% Avoid the use of s`.
   Ruby community, when creating a symbol that includes a space to
@@ -2519,7 +2519,7 @@ The translation of the following languages ​​are available:
   Depending on the contents of the regular expression, and prefer `{` little chance to be used more
   You might be a good choice.
 
-    `` `Ruby
+    ```   Ruby
     # Bad example
     % W [one two three]
     % Q {"Test's king!", John said.}
@@ -2527,9 +2527,9 @@ The translation of the following languages ​​are available:
     # A good example
     % W (one two three)
     % Q ("Test's king!", John said.)
-    `` `
+    ```   
 
-# # Meta-programming
+## Meta-programming
 
 * Avoid unnecessary meta-programming. Avoid needless metaprogramming.
 
@@ -2539,16 +2539,16 @@ The translation of the following languages ​​are available:
 * More of block passing `class_eval` is the preferred over string insertion type.
   - When you use the string insertion type, and race back to work, let's pass the `__LINE__` and `__FILE__` always:
 
-    `` `Ruby
+    ```   Ruby
     class_eval 'def use_relative_model_naming;? true; end', __ FILE__, __ LINE__
-    `` `
+    ```   
 
   - `Define_method` who is, is preferred over {def ...} `` class_eval.
 
 * When using a string insertion type (or other `eval`) `class_eval` a is,
   (It is used in Rails) and let's add to the comments of the code when it is inserted.
 
-    `` `Ruby
+    ```   Ruby
     # From activesupport / lib / active_support / core_ext / string / output_safety.rb
     UNSAFE_STRING_METHODS.each do | unsafe_method |
       if 'String'. respond_to? (unsafe_method)
@@ -2564,7 +2564,7 @@ The translation of the following languages ​​are available:
         EOT
       end
     end
-    `` `
+    ```   
 
 * `Let's avoid the meta-programming with method_missing`.
   This is because, the backtrace is in trouble,
@@ -2579,7 +2579,7 @@ The translation of the following languages ​​are available:
   - Let's call the `super` at the end
   - Let's transfer to assert, in the method it is not special:
 
-    `` `Ruby
+    ```   Ruby
     # Bad example
     def method_missing? (meth, * args, & block)
       if / ^ find_by_ (? <prop>. *) / = ~ meth
@@ -2599,9 +2599,9 @@ The translation of the following languages ​​are available:
     end
 
     # Still the best choice is to define_method to attribute all of that can be found
-    `` `
+    ```   
 
-# # Miscellaneous
+## Miscellaneous
 
 * `Let's write secure code in ruby-w`.
 * Avoid the use of hash as an optional variable. Is not there too much to do? (Initialization of an object is an exception to this rule)
@@ -2613,7 +2613,7 @@ The translation of the following languages ​​are available:
   Define the Kernel, let's set to private.
 * Instead of a global variable, let's use an instance variable of the module.
 
-    `` `Ruby
+    ```   Ruby
     # Bad example
     $ Foo_bar = 1
 
@@ -2625,7 +2625,7 @@ The translation of the following languages ​​are available:
     end
 
     Foo.bar = 1
-    `` `
+    ```   
 
 * `When alias_method` moves, let's avoid the `alias`.
 * Let's use the `OptionParser` to parse the complex command line options.
@@ -2637,18 +2637,18 @@ The translation of the following languages ​​are available:
 * Keep your consistency. Ideally speaking, let along these guidelines.
 * Let's use common sense.
 
-# # Tool
+## Tool
 
 Here are a few tools to help you to automatically check the code contrary to this guide.
 
-# # # RuboCop
+### RuboCop
 
 [RuboCop] (https://github.com/bbatsov/rubocop) was based on this guide
 Is Ruby code style checker.
 Rubocop covers an important part of this guide already,
 It supports MRI 1.9, 2.0 both MRI, there is a plug-in for good Emacs.
 
-# # # RubyMine
+### RubyMine
 
 [RubyMine] code inspection of (http://www.jetbrains.com/ruby/) is, in this guide
 [Based in part] (http://confluence.jetbrains.com/display/RUBYDEV/RubyMine+Inspections).
